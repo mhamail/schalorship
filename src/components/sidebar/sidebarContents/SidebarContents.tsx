@@ -43,7 +43,7 @@ const SidebarContents = () => {
     )
     return (
         <div className='px-4 pt-10 space-y-10'>
-            <MultiSelectFilter />
+            {/* <MultiSelectFilter /> */}
             {stepstoapply()}
             {schalorship()}
         </div>

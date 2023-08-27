@@ -4,7 +4,7 @@ import PrimaryButton from '@/components/buttons/primaryButton/PrimaryButton'
 
 const MultiSelectFilter = () => {
     return (
-        <div className='space-y-6 bg-white/90 text-text_primary p-2'>
+        <div className='space-y-6 bg-white/60 text-text_primary p-2'>
             <h4 className='font-bold text-lg'>
                 Find Desired University
             </h4>
