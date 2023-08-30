@@ -4,7 +4,7 @@ import MultiSelectFilter from '@/components/form/multiSelectFilter/MultiSelectFi
 
 const SidebarContents = () => {
     const stepstoapply = () => (
-        <div className='flex flex-col items-center space-y-3'>
+        <div className='text-center flex flex-col items-center space-y-3'>
             <h3 className='md:text-2xl font-bold mb-3'>
                 Steps for Applying</h3>
             <Link href={"#"}>
@@ -25,7 +25,7 @@ const SidebarContents = () => {
         </div>
     )
     const schalorship=()=>(
-        <div className='flex flex-col items-center space-y-3'>
+        <div className='flex flex-col items-center space-y-3 text-center'>
             <h3 className='md:text-xl font-bold mb-3'>
                 Schalorships
                 </h3>

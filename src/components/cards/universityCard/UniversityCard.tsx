@@ -39,7 +39,7 @@ const UniversityCard = () => {
     return (
         <div className='grid grid-cols-12 gap-6'>
             {data.map((item,index) => (
-                <Link href="#" key={index} className='cursor-pointer hover:bg-hover_primary hover:text-white md:col-span-6 xl:col-span-4 col-span-12 flex flex-col justify-between space-y-6 shadow-lg p-4'>
+                <Link href="#" key={index} className='cursor-pointer hover:bg-hover_primary hover:text-white md:col-span-4 sm:col-span-6 col-span-12 flex flex-col justify-between space-y-6 shadow-lg p-4'>
                     <div className='-skew-x-6 hover:skew-x-0'>
                         <Image
                             src={item.image}

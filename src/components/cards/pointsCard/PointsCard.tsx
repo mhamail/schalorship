@@ -34,7 +34,7 @@ const PointsCard = () => {
     return (
         <div className='grid grid-cols-12 sm:gap-6 gap-y-6'>
             {data.map((item, index) => (
-                <div className=' lg:col-span-4 sm:col-span-6 col-span-12 shadow-lg shadow-primary/70 ring-1 ring-primary/40 p-4 space-y-4'
+                <div className=' md:col-span-4 sm:col-span-6 col-span-12 shadow-lg shadow-primary/70 ring-1 ring-primary/40 p-4 space-y-4'
                     key={index}>
                     <div className='flex flex-col justify-around min-h-[300px] '>
                         <h2 className='font-bold md:text-xl text-lg'>

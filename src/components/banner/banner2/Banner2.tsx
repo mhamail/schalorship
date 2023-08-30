@@ -4,13 +4,15 @@ import ContactUs from '@/components/form/contactus/ContactUs'
 
 const Banner2 = () => {
     return (
-        <div className='p-6 py-20 relative bg-slate-200'>
-            <div className='text-center relative z-10'>
+        <div className='py-20 relative bg-slate-200'>
+            <div className='max-w-5xl mx-auto relative z-10'>
+                <div className='text-center'>
                 <Heading1a text='We will Apply For You' />
+                </div>
             </div>
-            <div className='lg:ms-40 md:mx-20 mt-10'>
-                <div className='flex flex-col lg:flex-row justify-between'>
-                    <div className='lg:w-1/3 w-full space-y-4'>
+            <div className='dimention mt-10'>
+                <div className='flex flex-col md:flex-row justify-between'>
+                    <div className='md:w-1/3 container mx-auto space-y-4'>
                         <h2 className='font-bold text-xl'>
                             What we do for You
                         </h2>
@@ -29,12 +31,12 @@ const Banner2 = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className='lg:w-1/2 w-full mt-16 lg:mt-0'>
+                    <div className='md:max-w-sm container mx-auto mt-16 lg:mt-0'>
                         <ContactUs />
                     </div>
                 </div>
             </div>
-            <div className='absolute lg:top-0 lg:left-1/2 lg:right-1/2 lg:-translate-x-1/2  lg:w-2 lg:h-full w-full h-2 top-[47%] left-0 right-0 -translate-y-1/2 lg:translate-y-0 bg-white -skew-x-12 -skew-y-3'>
+            <div className='absolute md:top-0 md:left-1/2 md:right-1/2 md:-translate-x-1/2  md:w-2 md:h-full w-full h-2 top-[47%] left-0 right-0 -translate-y-1/2 md:translate-y-0 bg-white -skew-x-12 -skew-y-3'>
             </div>
         </div>
     )

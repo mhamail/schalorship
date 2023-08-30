@@ -4,12 +4,12 @@ import InfoCard from '@/components/cards/infoCard/InfoCard'
 
 const SchalorshipOffer = () => {
   return (
-    <div className='space-y-6'>
-      <div className='text-center'>
-        <Heading1a text='Newest Schalorship Offer' />
+      <div className='space-y-6 dimention'>
+        <div className='text-center'>
+          <Heading1a text='Newest Schalorship Offer' />
+        </div>
+        <InfoCard />
       </div>
-      <InfoCard />
-    </div>
   )
 }
 

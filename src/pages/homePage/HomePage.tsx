@@ -9,20 +9,16 @@ const HomePage = () => {
   return (
     <div>
       <Banner1 />
-      <Sidebar>
         <div className='mt-10 space-y-16'>
           <div>
-            <div className='lg:ms-40 md:mx-20'>
-              <SchalorshipOffer />
-            </div>
+            <SchalorshipOffer />
             <DocumentRequired />
             <Banner2 />
           </div>
-          <div className='p-6 lg:ms-40 md:mx-20'>
+          <div className='dimention'>
             <Universities />
           </div>
         </div>
-      </Sidebar>
     </div>
   )
 }

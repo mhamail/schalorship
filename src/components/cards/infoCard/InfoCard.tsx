@@ -14,7 +14,7 @@ const InfoCard = () => {
     return (
         <div className='grid grid-cols-12 gap-6'>
             {images.map((image) => (
-                <div className='md:col-span-6 xl:col-span-4 col-span-12 flex flex-col justify-between space-y-6 shadow-lg p-4' key={Math.random()}>
+                <div className='md:col-span-4 sm:col-span-6 col-span-12 flex flex-col justify-between space-y-6 shadow-lg p-6' key={Math.random()}>
                     <div>
                         <Image
                             src={image}

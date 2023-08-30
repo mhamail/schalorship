@@ -4,14 +4,14 @@ import { BsFacebook, BsLinkedin, BsGoogle } from 'react-icons/bs'
 
 const Footer = () => {
     return (
-        <footer className='bg-slate-900 p-3 pt-16 pb-8 lg:max-h-[250px] relative'>
-            <div className='lg:w-11/12 mx-auto text-white flex flex-col lg:flex-row lg:justify-between items-center space-y-8 lg:space-y-0'>
+        <footer className='bg-slate-900 p-3 pt-16 pb-8 md:max-h-[250px] relative'>
+            <div className='dimention text-white flex flex-col md:flex-row md:justify-between items-center space-y-8 md:space-y-0'>
                 <h1 className='font-bold text-4xl'>
                     LOGO
                 </h1>
-                <div className='flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-14'>
+                <div className='flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-14'>
                     {/* col 1 */}
-                    <div className='flex flex-col text-center lg:text-start space-y-2'>
+                    <div className='flex flex-col text-center md:text-start space-y-2'>
                         <h3 className='text-sm font-bold capitalize'>Features</h3>
                         <div className='text-gray-500 flex flex-col space-y-1'>
                             <Link href="#" className="capitalize hover:text-hover_text hover:scale-105"
@@ -33,7 +33,7 @@ const Footer = () => {
                         </div>
                     </div>
                     {/* col 2 */}
-                    <div className='flex flex-col text-center lg:text-start space-y-2 '>
+                    <div className='flex flex-col text-center md:text-start space-y-2 '>
                         <h3 className='text-sm font-bold capitalize'>Pages</h3>
                         <div className='text-gray-500 flex flex-col space-y-1'>
                             <Link href="#" className="capitalize hover:text-hover_text  hover:scale-105"

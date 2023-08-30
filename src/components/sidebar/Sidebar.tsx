@@ -5,13 +5,15 @@ import SidebarApply from './SidebarApply'
 
 const Sidebar: FC<any> = ({ children }) => {
     return (
-        <div className='flex relative'>
-            <div className='md:w-3/4 w-full'>
-                <div className='h-full'>
+        <div className='w-full'>
+            <div className='flex'>
+                <div className='w-full'>
                     {children}
                 </div>
+                <div className='w-80 me-auto'>
+                    <SidebarApply />
+                </div>
             </div>
-            <SidebarApply />
         </div>
     )
 }

@@ -6,10 +6,12 @@ import { usePathname } from 'next/navigation'
 const Header = () => {
   const pathname = usePathname()
   return (
-    <div className={`${pathname==="/" && "bg-gray-200"}`}>
-      <div className='lg:w-11/12 mx-auto pt-6 p-3'>
+    <div className={`${pathname === "/" && "bg-gray-200"}`}>
+      <div className=' container max-w-6xl mx-auto p-3 pt-6'>
         <div className='flex justify-between items-center'>
-          <div className='text-3xl font-bold'>LOGO</div>
+          <div className='text-3xl font-bold'>
+            LOGO
+          </div>
           <div className='hidden lg:flex space-x-8'>
             <MenuItems />
           </div>

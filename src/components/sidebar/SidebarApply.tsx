@@ -30,7 +30,7 @@ const SidebarApply = () => {
 
     return (
         <div
-            className={`md:w-1/4 h-screen bg-primary hidden md:block ${isSidebarFixed && 'fixed right-0 top-0'}`}
+            className={`h-screen bg-primary hidden md:block ${isSidebarFixed && 'fixed top-0 w-auto'}`}
         >
             <div className='text-white overflow-y-auto' style={{ height: sidebarHeight }}>
                 <SidebarContents />

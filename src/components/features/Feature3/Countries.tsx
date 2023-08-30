@@ -4,7 +4,7 @@ import UniversityCard from '@/components/cards/universityCard/UniversityCard'
 const Universities = () => {
     return (
         <div className='space-y-6'>
-            <div className=''>
+            <div className='text-center'>
                 <Heading1a text='Universities' />
             </div>
             <UniversityCard />
