@@ -1,10 +1,17 @@
+"use client"
+import { useRef } from 'react'
 import Link from 'next/link'
 import React from 'react'
 import { BsFacebook, BsLinkedin, BsGoogle } from 'react-icons/bs'
+// context
+import { useSidebarFooter } from '@/utils/useContext/sidebarFooterContext/SidebarFooterContext'
 
 const Footer = () => {
+    const footerRef = useRef<HTMLDivElement | null>(null);
+    const {updateFooterHeight } = useSidebarFooter();
+    updateFooterHeight(footerRef.current?.clientHeight|| 0)
     return (
-        <footer className='bg-slate-900 p-3 pt-16 pb-8 md:max-h-[250px] relative'>
+        <footer className='bg-slate-900 p-3 pt-16 pb-8 md:max-h-[250px] relative' ref={footerRef}>
             <div className='dimention text-white flex flex-col md:flex-row md:justify-between items-center space-y-8 md:space-y-0'>
                 <h1 className='font-bold text-4xl'>
                     LOGO
@@ -54,7 +61,7 @@ const Footer = () => {
                             </Link>
                         </div>
                     </div>
-                  
+
                 </div>
                 <div className='flex space-x-6'>
                     <Link href="#" className='hover:scale-125'>

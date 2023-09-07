@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Input = () => {
+const InputEmail = () => {
     return (
         <div>
             <label>
@@ -36,4 +36,4 @@ const Input = () => {
     )
 }
 
-export default Input
+export default InputEmail

@@ -18,3 +18,6 @@ body {
 .dimention {
     @apply container max-w-5xl mx-auto p-3;
 }
+.dimention6xl {
+    @apply container max-w-6xl mx-auto p-3;
+}

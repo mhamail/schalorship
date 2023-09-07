@@ -1,5 +1,5 @@
 import React from 'react'
-import Input from '@/components/input/Input'
+import Input from '@/components/input/InputEmail'
 import Textarea from '@/components/input/Textarea'
 import PrimaryButton from '@/components/buttons/primaryButton/PrimaryButton'
 const ContactUs = () => {
