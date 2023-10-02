@@ -1,35 +1,30 @@
 import React, { FC } from 'react'
 
-interface InputProps {
+interface props {
     label: string,
-    required?: boolean,
-    type?: string,
+    placeholder: string,
     handleEvent?: () => {},
     name: string,
-    placeholder: string,
     value?: string | number
 }
-
-const Input: FC<InputProps> = ({ label, required, type, name, placeholder, value, handleEvent }) => {
-    const Required = () => (
-        <span className='text-primary'>*</span>
-    )
+const Textarea2: FC<props> = ({ name, value, label, placeholder, handleEvent }) => {
     return (
         <div>
             <label>
-                {label} &nbsp;
-                {required && Required()}
+                {label}
             </label>
-            <input
-                type={type || "text"}
+
+            <textarea
+                rows={4}
                 placeholder={placeholder}
                 name={name}
                 value={value}
                 className="w-full rounded-md border border-gray-400 pe-10 shadow-sm sm:text-sm p-3 relative"
                 onChange={handleEvent}
-            />
+            >
+            </textarea>
         </div>
     )
 }
 
-export default Input
+export default Textarea2

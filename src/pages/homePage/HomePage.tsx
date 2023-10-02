@@ -1,6 +1,5 @@
 import React from 'react'
 import Banner1 from '@/components/banner/banner1/Banner1'
-import Sidebar from '@/components/sidebar/Sidebar'
 import SchalorshipOffer from '@/components/features/Feature1/SchalorshipOffer'
 import DocumentRequired from '@/components/features/Feature2/DocumentRequired'
 import Banner2 from '@/components/banner/banner2/Banner2'

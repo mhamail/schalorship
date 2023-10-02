@@ -11,7 +11,6 @@ const SidebarApply = () => {
     const [toggle, setToggle] = useState(false);
     //context
     const {footerHeight} =useSidebarFooter()
-
     //mobile *openFilter
     const openFilter = () => {
         setToggle(!toggle);

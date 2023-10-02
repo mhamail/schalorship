@@ -8,6 +8,7 @@ const light = {
     text_w: "#ffffff",
     border:"#00000041",
     text_primary:"#000000",
+    dim_primary:"#0126f886"
 }
 
 export const color = light

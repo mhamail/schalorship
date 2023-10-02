@@ -1,79 +1,75 @@
-import React, { ChangeEvent, FormEvent } from 'react'
+"use client"
+import React, { ChangeEvent, FormEvent, useState } from 'react'
+// components
+import SelectDatePicker from './SelectDatePicker';
 import Input from '@/components/input/input'
+import PrimaryButton from '@/components/buttons/primaryButton/PrimaryButton';
+import InputQuill from '@/components/input/InputQuill';
+import Select from '@/components/select/Select'
+import MultiSelect from '@/components/select/MultiSelect';
 
 const AddProduct = () => {
-    // const [value, setValues] = useState<{}>({
-    //     image: "",
-    //     title: "",
-    //     highlight: "",
-    //     description: "",
-    //     country: "",
-    //     funding: "",
-    //     university: "",
-    //     degree: "",
-    //     subject: []
-    // })
+    const [values, setValue] = useState({
+        title: "",
+        funding: "Default *Full Funding*",
+        university: "Select University Name",
+        degree: "Select Degree Type",
+        subjects: [],
+        country: "Select Country"
+    })
+    const { title, funding, university, degree, subjects, country } = values;
 
-    async function create(formData: FormData) {
-        'use server';
-        console.log(formData)
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
     }
-    // const handleEvent = (event: ChangeEvent<HTMLInputElement>) => {
-    //     const value = event.target.value
-    // }
-
+console.log(values)
     return (
         <>
-            <form action={create} className='space-y-6'>
+            <form onSubmit={handleSubmit} className='space-y-6'>
                 <Input
-                    title="Enter Title"
+                    label="Enter Title"
                     required
                     name='title'
                     placeholder='Enter Schalorship Title'
                 />
-                   <Input
-                    title="Enter Highlight"
-                    required
-                    name='highlight'
-                    placeholder='Enter Highlight'
+                {/* funding type */}
+                  <Select
+                    placeholder={funding}
+                    setValue={setValue}
+                    name={"funding"}
                 />
-                   <Input
-                    title="Enter Description"
+                {/* university name */}
+                <Select
+                    placeholder={university}
                     required
-                    name='description'
-                    placeholder='Enter Schalorship Description'
+                    setValue={setValue}
+                    name={"university"}
                 />
-                   <Input
-                    title="Enter Country"
+                {/* degree name */}
+                <Select
+                    placeholder={degree}
                     required
-                    name='title'
-                    placeholder='Enter Schalorship Title'
+                    setValue={setValue}
+                    name={"degree"}
                 />
-                  <Input
-                    title="Enter Funding Type"
+                {/* Select Subjects */}
+                <MultiSelect
+                 placeholder={"Default *all subjects*"}
+                 setValue={setValue}
+                 name={"subjects"}
+                 data={subjects}
+                />
+                {/* country name */}
+                <Select
+                    placeholder={country}
                     required
-                    name='funding'
-                    placeholder='i.e Full Funding'
+                    setValue={setValue}
+                    name={"country"}
                 />
-                 <Input
-                    title="Enter University"
-                    required
-                    name='university'
-                    placeholder='unversity name'
-                />
-                 <Input
-                    title="Enter Degree"
-                    required
-                    name='degree'
-                    placeholder='degree type'
-                />
-                 <Input
-                    title="Enter Subjects"
-                    required
-                    name='sunjects'
-                    placeholder='Computer Science, Electrical'
-                />
+                <SelectDatePicker />
+                <InputQuill />
 
+                <PrimaryButton text={"Submit"} className='w-full' />
             </form>
         </>
     )

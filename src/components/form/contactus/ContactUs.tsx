@@ -9,7 +9,10 @@ const ContactUs = () => {
                 Consult Us
             </h2>
             <Input />
-            <Textarea />
+            <Textarea
+                label='Enter your consultation purpose'
+                placeholder='Enter your detail, purpose...'
+            />
             <div className='w-full'>
                 <PrimaryButton text={"Submit"} className='w-full' />
             </div>
