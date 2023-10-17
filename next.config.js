@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    experimental:{
-        serverActions:true,
+    API: "http://localhost:3000/api",
+    experimental: {
+        serverActions: true,
     },
-    images:{}
+    images: {}
 }
 
 module.exports = nextConfig

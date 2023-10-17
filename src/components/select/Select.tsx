@@ -7,8 +7,9 @@ interface props {
     setValue: React.Dispatch<React.SetStateAction<any>>,
     name: string,
     required?: boolean
+    formData:FormData
 }
-const Select: FC<props> = ({ placeholder, setValue, name, required }) => {
+const Select: FC<props> = ({ placeholder, setValue, name, required,formData }) => {
     const [open, setOpen] = useState(false);
     const list = [
         "select 1",
@@ -33,6 +34,7 @@ const Select: FC<props> = ({ placeholder, setValue, name, required }) => {
         setValue((prevValues: any) => {
             return { ...prevValues, [name.toString()]: select };
         });
+        formData.set(name,select)
         setOpen(false);
     }
     const Required = () => (

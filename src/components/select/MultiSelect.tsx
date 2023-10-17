@@ -9,8 +9,10 @@ interface props {
     name: string,
     required?: boolean,
     data: string[],
+    formData: FormData,
 }
-const MultiSelect: FC<props> = ({ placeholder, data, setValue, name, required }) => {
+
+const MultiSelect: FC<props> = ({ placeholder, data, setValue, name, required, formData }) => {
     const [open, setOpen] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
     const list = [
@@ -36,16 +38,17 @@ const MultiSelect: FC<props> = ({ placeholder, data, setValue, name, required })
 
     const handleClick = (select: string) => {
         !data.includes(select) &&
-        setValue((prevValues: any) => {
-            return {
-                ...prevValues,
-                [name.toString()]: [...data, select],
-            };
-        });
+            setValue((prevValues: any) => {
+                return {
+                    ...prevValues,
+                    [name.toString()]: [...data, select],
+                };
+            });
+        formData.set(name, JSON.stringify([...data, select]))
     }
     // remove select
     const removeSelect = (select: string) => {
-        const filter = data.filter((item,index)=>{
+        const filter = data.filter((item, index) => {
             return select !== item
         })
         setValue((prevValues: any) => {
@@ -54,7 +57,9 @@ const MultiSelect: FC<props> = ({ placeholder, data, setValue, name, required })
                 [name.toString()]: filter,
             };
         });
+        formData.set(name, JSON.stringify(filter))
     }
+    // searching to show
     const filteredList = list.filter((item) =>
         item.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -62,21 +67,35 @@ const MultiSelect: FC<props> = ({ placeholder, data, setValue, name, required })
         <span className='text-primary'>*</span>
     )
     return (
-        <div ref={divRef} className='relative'>
+        <div className='relative'>
             <div className='group'>
                 <label>
-                    Select <span className='capitalize'>{name}</span>
+                    Select <span className='capitalize'>
+                        {name}
+                    </span>
                     &nbsp;
                     {required && Required()}
                 </label>
-                <div className={`p-1 w-full border border-gray-400 group-hover:border-primary group-hover:bg-dim_primary flex items-center justify-between cursor-pointer select-none text-text_primary rounded-sm`}
+                <div ref={divRef} className={`p-1 w-full border border-gray-400 group-hover:border-primary group-hover:bg-dim_primary flex items-center justify-between cursor-pointer select-none text-text_primary rounded-sm`}
                     onClick={() => setOpen(!open)}
                 >
-                    {placeholder}
+                    {/* show on placeholder */}
+                    {data.length > 0 ?
+                        <div className='flex space-x-2'>
+                            {data.map((item, index) =>
+                                <p key={index}>
+                                    {item}
+                                    {index !== data.length - 1 && ','}
+                                </p>)}
+                        </div>
+                        :
+                        placeholder
+                    }
                     <IoMdArrowDropdown />
                 </div>
+                {/* toggle */}
                 {open &&
-                    <div className='bg-white shadow-lg border'>
+                    <div className='bg-white shadow-lg border' ref={divRef}>
 
                         <div className='flex flex-wrap'>
                             {data.map((item, index) => (

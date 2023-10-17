@@ -4,7 +4,7 @@ interface InputProps {
     label: string,
     required?: boolean,
     type?: string,
-    handleEvent?: () => {},
+    handleEvent?: (event: React.ChangeEvent<HTMLInputElement>) => void;
     name: string,
     placeholder: string,
     value?: string | number
@@ -20,6 +20,7 @@ const Input: FC<InputProps> = ({ label, required, type, name, placeholder, value
                 {label} &nbsp;
                 {required && Required()}
             </label>
+            {/*  */}
             <input
                 type={type || "text"}
                 placeholder={placeholder}

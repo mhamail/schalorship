@@ -15,11 +15,11 @@ const AddSchalorship = () => {
         <div className='p-3'>
           <div className='flex justify-between flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0'>
             {/* adding product form */}
-            <div className='w-3/4 space-y-4'>
+            <div className='md:w-3/4 space-y-4'>
               <AddProduct />
             </div>
             {/* other cards */}
-            <div className='w-1/4 space-y-8'>
+            <div className='w-1/4 space-y-8 hidden md:block'>
               <div className='h-52 w-full shadow-xl'></div>
               <div className='h-52 w-full shadow-xl'></div>
               <div className='h-52 w-full shadow-xl'></div>
