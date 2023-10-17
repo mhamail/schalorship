@@ -3,12 +3,13 @@ import React, { useState, useEffect } from 'react'
 // components
 import dynamic from 'next/dynamic';
 const InputQuill = dynamic(() => import('@/components/form/input/InputQuill'), {
-    ssr: false, // Disable server-side rendering
+    ssr: false
   });
+  // import InputQuill from '@/components/form/input/InputQuill';
 import SelectDatePicker from './SelectDatePicker';
 import Input from '@/components/form/input/input'
 import PrimaryButton from '@/components/buttons/primaryButton/PrimaryButton';
-// import InputQuill from '@/components/form/input/InputQuill';
+
 import Select from '@/components/select/Select'
 import MultiSelect from '@/components/select/MultiSelect';
 import FileUpload from '../fileUpload/FileUpload';

@@ -67,7 +67,7 @@ const MultiSelect: FC<props> = ({ placeholder, data, setValue, name, required, f
         <span className='text-primary'>*</span>
     )
     return (
-        <div className='relative'>
+        <div className='relative' ref={divRef}>
             <div className='group'>
                 <label>
                     Select <span className='capitalize'>
@@ -76,7 +76,7 @@ const MultiSelect: FC<props> = ({ placeholder, data, setValue, name, required, f
                     &nbsp;
                     {required && Required()}
                 </label>
-                <div ref={divRef} className={`p-1 w-full border border-gray-400 group-hover:border-primary group-hover:bg-dim_primary flex items-center justify-between cursor-pointer select-none text-text_primary rounded-sm`}
+                <div className={`p-1 w-full border border-gray-400 group-hover:border-primary group-hover:bg-dim_primary flex items-center justify-between cursor-pointer select-none text-text_primary rounded-sm`}
                     onClick={() => setOpen(!open)}
                 >
                     {/* show on placeholder */}
@@ -95,7 +95,7 @@ const MultiSelect: FC<props> = ({ placeholder, data, setValue, name, required, f
                 </div>
                 {/* toggle */}
                 {open &&
-                    <div className='bg-white shadow-lg border' ref={divRef}>
+                    <div className='bg-white shadow-lg border'>
 
                         <div className='flex flex-wrap'>
                             {data.map((item, index) => (
